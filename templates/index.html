@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+      background-image: url('https://cdn.pixabay.com/photo/2014/11/12/19/25/diabetes-528678_1280.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.6); /* Make the container transparent [[3](https://www.w3schools.com/css/css_image_transparency.asp)] */
+      border-radius: 5px;
+      padding: 20px;
+      margin: 50px auto;
+      width: 350px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex; /* Use flexbox for horizontal layout [[4](https://www.blogginglove.com/horizontal-form-in-css/)] */
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      display: flex; /* Make form elements horizontal [[6](https://stackoverflow.com/questions/5970616/displaying-html-form-inputs-horizontally)] */
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    input[type="text"], input[type="number"] {
+      width: auto; /* Adjust width for horizontal layout */
+      padding: 10px;
+      margin: 5px; /* Add spacing between inputs */
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px; /* Add spacing for the button */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Diabetes Prediction</h1>
+    <form action="/prediction" method="POST">
+      <input type="number" name="Pregnancies" placeholder="Pregnancies">
+      <input type="number" name="Glucose" placeholder="Glucose">
+      <input type="number" name="BloodPressure" placeholder="Blood Pressure">
+      <input type="number" name="SkinThickness" placeholder="Skin Thickness">
+      <input type="number" name="Insulin" placeholder="Insulin">
+      <input type="number" name="BMI" placeholder="BMI">
+      <input type="number" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function">
+      <input type="number" name="Age" placeholder="Age">
+      <button type="submit" class="btn">Predict</button>
+    </form>
+  </div>
+</body>
+</html>

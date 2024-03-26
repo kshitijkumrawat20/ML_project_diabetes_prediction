@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction Results</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+      background-image: url('https://cdn.pixabay.com/photo/2014/11/12/19/25/diabetes-528678_1280.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    h1, p {
+      text-align: center;
+      font-weight: 900; /* Make text bolder */
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #333;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    a {
+      display: block;
+      width: 200px;
+      margin: 20px auto 0;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    a:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>Diabetes Prediction</h1>
+  {% if result %}
+    <p>Prediction:{{ result }} </p>
+  {% else %}
+    <p>An error occurred during prediction.</p>
+  {% endif %}
+  <a href="/">Go to Prediction</a>
+</body>
+</html>
